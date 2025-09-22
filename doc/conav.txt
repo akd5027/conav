@@ -1,0 +1,53 @@
+*conav.txt*	A source-code browsing support utility
+Alex Davis                                                             *conav*
+
+==============================================================================
+CONTENTS                                                      *conav-contents*
+  1. Configuration..............................................|conav-config|
+  2. Commands.................................................|conav-commands|
+  3. Functions...............................................|conav-functions|
+
+==============================================================================
+CONFIGURATION                                                   *conav-config*
+
+This plugin uses maktaba flags for configuration. Install Glaive
+(https://github.com/google/glaive) and use the |:Glaive| command to configure
+them.
+
+                                                      *conav:plugin[commands]*
+Configures whether plugin/commands.vim should be loaded.
+Default: 1 `
+
+                                                      *conav:plugin[mappings]*
+Configures whether plugin/mappings.vim should be loaded.
+Default: 0 `
+
+==============================================================================
+COMMANDS                                                      *conav-commands*
+
+:ToggleSourceHeader                                      *:ToggleSourceHeader*
+  Switches between header and source file.
+
+:SplitSourceHeader                                        *:SplitSourceHeader*
+  Switches between header and source file.
+
+:FileSearch                                                      *:FileSearch*
+  Switches between header and source file.
+
+==============================================================================
+FUNCTIONS                                                    *conav-functions*
+
+conav#ToggleSourceHeader()                        *conav#ToggleSourceHeader()*
+  Swiches between the current file and its related source/header file.
+
+  C and C++ files are supported, in the event that
+
+conav#SplitSourceHeader()                          *conav#SplitSourceHeader()*
+  Opens the sibling file in a split buffer
+
+conav#FileSearch()                                        *conav#FileSearch()*
+  Allows for a fuzzy-search on files beneath the current ViM working
+  directory.
+
+
+vim:tw=78:ts=8:ft=help:norl:

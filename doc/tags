@@ -1,0 +1,14 @@
+:FileSearch	conav.txt	/*:FileSearch*
+:SplitSourceHeader	conav.txt	/*:SplitSourceHeader*
+:ToggleSourceHeader	conav.txt	/*:ToggleSourceHeader*
+conav	conav.txt	/*conav*
+conav#FileSearch()	conav.txt	/*conav#FileSearch()*
+conav#SplitSourceHeader()	conav.txt	/*conav#SplitSourceHeader()*
+conav#ToggleSourceHeader()	conav.txt	/*conav#ToggleSourceHeader()*
+conav-commands	conav.txt	/*conav-commands*
+conav-config	conav.txt	/*conav-config*
+conav-contents	conav.txt	/*conav-contents*
+conav-functions	conav.txt	/*conav-functions*
+conav.txt	conav.txt	/*conav.txt*
+conav:plugin[commands]	conav.txt	/*conav:plugin[commands]*
+conav:plugin[mappings]	conav.txt	/*conav:plugin[mappings]*

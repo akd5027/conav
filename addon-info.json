@@ -1,0 +1,11 @@
+{
+  "name": "conav",
+  "description": "A source-code browsing support utility",
+  "author": "Alex Davis",
+  "dependencies": {
+    "maktaba": {
+      "type": "git",
+      "url": "git://github.com/google/maktaba"
+    }
+  }
+}
