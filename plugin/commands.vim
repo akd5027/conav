@@ -18,4 +18,8 @@ command SplitSourceHeader call conav#SplitSourceHeader()
 
 ""
 " Switches between header and source file.
-command FileSearch call conav#FileSearch()
+command -nargs=? FileSearch call conav#FileSearch(<f-args>)
+
+""
+" Switches between header and source file.
+command FileSearchCurrent call conav#FileSearch(expand('%:h'))

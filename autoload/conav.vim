@@ -45,8 +45,9 @@ endfunction
 " @public
 " Allows for a fuzzy-search on files beneath the current ViM working
 " directory.
-function! conav#FileSearch()
-  let files = split(maktaba#syscall#Create(['find', '-type', 'f', '-not', '-name', '*.sw[op]']).Call().stdout, '\n')
+function! conav#FileSearch(...)
+  let dir = get(a:, 1, '.')
+  let files = split(maktaba#syscall#Create(['find', l:dir, '-type', 'f', '-not', '-name', '*.sw[op]']).Call().stdout, '\n')
         \->map('substitute(v:val, "^\./", "", "")')
   call fpop#FilePicker(l:files)
 endfunction

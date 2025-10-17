@@ -1,4 +1,5 @@
 :FileSearch	conav.txt	/*:FileSearch*
+:FileSearchCurrent	conav.txt	/*:FileSearchCurrent*
 :SplitSourceHeader	conav.txt	/*:SplitSourceHeader*
 :ToggleSourceHeader	conav.txt	/*:ToggleSourceHeader*
 conav	conav.txt	/*conav*

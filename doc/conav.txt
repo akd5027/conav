@@ -34,6 +34,9 @@ COMMANDS                                                      *conav-commands*
 :FileSearch                                                      *:FileSearch*
   Switches between header and source file.
 
+:FileSearchCurrent                                        *:FileSearchCurrent*
+  Switches between header and source file.
+
 ==============================================================================
 FUNCTIONS                                                    *conav-functions*
 
