@@ -29,13 +29,18 @@ COMMANDS                                                      *conav-commands*
   Switches between header and source file.
 
 :SplitSourceHeader                                        *:SplitSourceHeader*
-  Switches between header and source file.
+  Opens the related source/header file in a split.
 
 :FileSearch                                                      *:FileSearch*
-  Switches between header and source file.
+  Does a fuzzy search across all files beneath the provided path relative to
+  the ViM working directory. If the current buffer is not a file then the
+  current working directory of ViM will be used.
 
 :FileSearchCurrent                                        *:FileSearchCurrent*
-  Switches between header and source file.
+  Does a fuzzy search across all files beneath the current buffers directory.
+
+  If the current buffer is not a file then the current working directory of
+  ViM will be used.
 
 ==============================================================================
 FUNCTIONS                                                    *conav-functions*
@@ -48,9 +53,11 @@ conav#ToggleSourceHeader()                        *conav#ToggleSourceHeader()*
 conav#SplitSourceHeader()                          *conav#SplitSourceHeader()*
   Opens the sibling file in a split buffer
 
-conav#FileSearch()                                        *conav#FileSearch()*
-  Allows for a fuzzy-search on files beneath the current ViM working
-  directory.
+conav#FileSearch([directory])                             *conav#FileSearch()*
+  Allows for a fuzzy-search on files beneath the provided [directory].
+
+  In the event that no [directory] is provided or the provided directory is
+  the empty, the current vim working directory will be used .
 
 
 vim:tw=78:ts=8:ft=help:norl:

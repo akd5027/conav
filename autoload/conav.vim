@@ -43,11 +43,19 @@ endfunction
 
 ""
 " @public
-" Allows for a fuzzy-search on files beneath the current ViM working
-" directory.
+" Allows for a fuzzy-search on files beneath the provided [directory].
+"
+" In the event that no [directory] is provided or the provided directory is
+" the empty, the current vim working directory will be used .
 function! conav#FileSearch(...)
   let dir = get(a:, 1, '.')
-  let files = split(maktaba#syscall#Create(['find', l:dir, '-type', 'f', '-not', '-name', '*.sw[op]']).Call().stdout, '\n')
+  if empty(l:dir)
+    let dir = '.'
+  endif
+
+  let files = maktaba#syscall#Create(['find', l:dir, '-type', 'f', '-not', '-name', '*.sw[op]']).Call().stdout
+        \->split('\n')
         \->map('substitute(v:val, "^\./", "", "")')
+
   call fpop#FilePicker(l:files)
 endfunction
